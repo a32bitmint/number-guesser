@@ -10,7 +10,7 @@ void Main()
     {
         int easy = 100;
         int hard = 1000;
-        Console.WriteLine("Which mode would you like to play, easy or hard?");
+        Console.WriteLine("Which mode would you like to play, easy or hard? (or exit to exit)");
         var mode = Console.ReadLine().ToLower();
         if (mode == "easy")
         {
@@ -20,10 +20,13 @@ void Main()
         {
             Play(hard);
         }
+        else if (mode == "exit")
+	{
+		return;
+	}
         else
         {
             Console.WriteLine("Whoops! That's not an option!");
-            
         }
     }
     
